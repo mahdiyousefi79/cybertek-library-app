@@ -2,6 +2,7 @@ package com.cybertek.library.step_definitions;
 
 import com.cybertek.library.pages.LandingPage;
 import com.cybertek.library.pages.UsersPage;
+import com.cybertek.library.utilities.BrowserUtils;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
@@ -56,6 +57,9 @@ public class pageNavigation_StepDefinition {
      select = new Select(usersPage.showRecordsDropDown);
 
         List<WebElement> webElements = select.getOptions();
+
+        List<String> elementsText = BrowserUtils.getElementsText(webElements);
+
 
 
     }
